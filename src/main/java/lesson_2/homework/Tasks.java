@@ -2,6 +2,13 @@ package lesson_2.homework;
 
 public class Tasks {
     public static void main(String[] args) {
+        task_1();
+        sepStr();
+        task_2();
+        sepStr();
+        task_3();
+
+
     }
 
     /**
@@ -11,13 +18,13 @@ public class Tasks {
     public static void task_1() {
         int a = 1;
         String b = "1";
-//        if (a == b) {
-//            System.out.println("success");
-//        }
+        if (a == Integer.parseInt(b)) {
+            System.out.println("true");
+        }
 
-//        if (b.equals(a)) {
-//            System.out.println("success");
-//        }
+        if (b.equals(Integer.toString(a))) {
+            System.out.println("true");
+        }
     }
 
     /**
@@ -29,16 +36,21 @@ public class Tasks {
             switch (str) {
                 case "one":
                     System.out.print(1);
+                    break;
                 case "two":
                     System.out.print(2);
+                    break;
                 case "three":
                     System.out.print(3);
                 default:
                     System.out.print(5);
+                    continue;
             }
 
             switch (str.indexOf("o")) {
                 case 0:
+                    System.out.print(2);
+                    break;
                 case 1:
                 case 2:
                     System.out.print(10);
@@ -54,11 +66,11 @@ public class Tasks {
      */
     public static void task_3() {
         for (int i = 0; i < 4; i++) {
-//            if (compare(i, ???) ??? decreaseAndCompare(i, ???) ??? incrementAndCompare(i, ???)) {
-//                System.out.print("4");
-//            } else if (decreaseAndCompare(???, i) ??? incrementAndCompare(???, i) ??? compare(???, i)) {
-//                System.out.print("8");
-//            }
+            if (compare(i, 1) && decreaseAndCompare(i, 0) & incrementAndCompare(i, 2)) {
+                System.out.print("4");
+            } else if (decreaseAndCompare(4, i) | incrementAndCompare(1, i) | compare(3, i)) {
+                System.out.print("8");
+            }
         }
 
     }
@@ -79,5 +91,11 @@ public class Tasks {
         boolean result = ++a == b;
         if (result) System.out.print(a);
         return result;
+    }
+
+    public static void sepStr() {
+        System.out.println();
+        System.out.println("____________");
+
     }
 }
